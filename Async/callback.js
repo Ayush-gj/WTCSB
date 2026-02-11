@@ -1,46 +1,40 @@
 // setTimeout(() => {
-//     console.log("first");
-    
+//     console.log('Hello World');
 // },4000);
-
-
-// let count=0;
-// let id=setInterval(() => {
-//     console.log("first");
+// let count = 0;
+// setInterval(() => {
+//     console.log('Hello World');
 //     count++;
-//     if(count===5){
-//         clearInterval(id)
+//     if(count == 5){
+//         clearInterval();
 //     }
 // },2000);
+// function roll(num, delay, next) {
+//     setTimeout(() => {
+//         console.log("Roll no is : " + num);
+//         if (next) {
+//             next();
+//         }
+//     }, delay);
+// }
+
+// roll(12212, 2000, () => {
+//     console.log("Wait its downloading");
+//     roll(34234, 3000, () => {
+//         console.log("Wait its downloading");
+//         roll(23423, 1000, () => {
+//             console.log("Wait its downloading");
+//             roll(45678, 2500);
+//         });
+//     });
+// });
 
 
-
-function roll(num,next){
-    if(num===12212){
-    setTimeout(() => {
-        console.log("Roll no. is "+ num);
-        if(next)next();
-    },2000)
-    }else if(num===12312){
-        setTimeout(() => {
-        console.log("Roll no. is "+ num);
-        if(next)next();
-    },3000)
-    }
-    else{
-        setTimeout(() => {
-        console.log("Roll no. is "+ num);
-        if(next)next();
-    },4000)
-    }
+let uiTeam = ["Deepanshu", "Rohit", "Satyarth"];
+let flutterTeam = ["Ankit", "Rishabh", "Ayush"];
+function showMenu(uiTeam, flutterTeam) {
+    console.log("UI Team: " + uiTeam);
+    console.log("Flutter Team: " + flutterTeam);
+    console.log("Merger team : ",...uiTeam,...flutterTeam);
 }
-roll(12212,() =>{
-    console.log("wait its getting downloaded");
-    roll(12312,() =>{
-        console.log("wait its getting downloaded");
-        roll(12412,()=>{
-            console.log(("wait its almost over"));
-            roll(12512);
-        });
-    });
-});
+showMenu(uiTeam, flutterTeam);
